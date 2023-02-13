@@ -1,4 +1,6 @@
 import "./App.css";
+import Search from "./cocktail/Search";
+
 // import InputForm from "./components/InputForm";
 // import InputForm1 from "./components/InputForm1";
 import UseEff from "./components/UseEff";
@@ -14,12 +16,17 @@ function App() {
     <div>
       {/* <InputForm /> */}
       {/* <InputForm1 /> */}
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<UseEff />} />
-                <Route path="new" element={<New />} />
-            </Routes>
-        </BrowserRouter>
+
+      {/*Cocktail-API Search component :- 11/2/23 */}
+      {/*  <BrowserRouter>*/}
+      {/*      <Routes>*/}
+      {/*          <Route path="/" element={<UseEff />} />*/}
+      {/*          <Route path="new" element={<New />} />*/}
+      {/*      </Routes>*/}
+      {/*  </BrowserRouter>*/}
+
+      {/*COcktail API Search component :- 13/2/23*/}
+        <Search />  
     </div>
   )
 }
