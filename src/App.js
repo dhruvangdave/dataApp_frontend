@@ -1,3 +1,4 @@
+import React, {createContext} from "react";
 import "./App.css";
 import Search from "./cocktail/Search";
 
@@ -10,8 +11,15 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
+const data = createContext();
+const data1 = createContext();
 
 function App() {
+
+    const name = "Dhruvang";
+    const sweetName = "Darling";
+    const message = "Data not found";
+
   return (
     <div>
       {/* <InputForm /> */}
@@ -25,10 +33,15 @@ function App() {
       {/*      </Routes>*/}
       {/*  </BrowserRouter>*/}
 
-      {/*COcktail API Search component :- 13/2/23*/}
-        <Search />  
+      {/*Cocktail API Search component :- 13/2/23*/}
+        <data.Provider value={[name, sweetName]}>
+            <data1.Provider value={message}>
+                <Search />
+            </data1.Provider>
+        </data.Provider>
     </div>
   )
 }
 
 export default App;
+export {data, data1};

@@ -1,9 +1,11 @@
-import {React, useEffect, useState} from 'react';
+import {React, useContext, useEffect, useState} from 'react';
+import { data, data1 } from "../App";
 
 function Search() {
     const [ drinks, setDrinks ] = useState([]);
     const [ search, setSearch ] = useState('');
-
+    const [ Name, SweetName ] = useContext(data);
+    const Message = useContext(data1);
     useEffect(()=>{
         fetching()
     }, [search])
@@ -27,7 +29,7 @@ function Search() {
                 </form>
 
                 <div className="row p-2">
-                    { drinks === null && <h3 className="text-center py-3">"Data not found"</h3>}
+                    { drinks === null && <h3 className="text-center py-3">"I am sorry {Name} {SweetName}, {Message}"</h3>}
                 { drinks !== null  && drinks.map((ele, index)=>{
                     return (
                         <div className="card col-md-3" key={index}>
