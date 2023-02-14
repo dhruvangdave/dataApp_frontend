@@ -1,7 +1,5 @@
-import React from "react";
 import "./App.css";
 import Search from "./cocktail/Search";
-import DataState from "./context/DataState";
 
 // import InputForm from "./components/InputForm";
 // import InputForm1 from "./components/InputForm1";
@@ -14,9 +12,7 @@ import {
 } from "react-router-dom";
 
 function App() {
-
   return (
-      <>
     <div>
       {/* <InputForm /> */}
       {/* <InputForm1 /> */}
@@ -29,12 +25,9 @@ function App() {
       {/*      </Routes>*/}
       {/*  </BrowserRouter>*/}
 
-      {/*Cocktail API Search component :- 13/2/23*/}
-        <DataState>
-            <Search />
-        </DataState>
+      {/*COcktail API Search component :- 13/2/23*/}
+        <Search />  
     </div>
-      </>
   )
 }
 
